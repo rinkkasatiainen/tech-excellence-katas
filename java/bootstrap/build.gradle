@@ -22,11 +22,9 @@ dependencies {
 
 tasks.withType(JavaCompile) {
     options.compilerArgs.add("-Xlint:all")
-    options.compilerArgs.add("--enable-preview")
 }
 
 test {
-    jvmArgs("--enable-preview")
     useJUnitPlatform()
     testLogging {
         events "passed", "skipped", "failed"
